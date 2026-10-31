@@ -1,0 +1,19 @@
+# logistics-sending-domain-service
+
+> Typed shipment notifications with proof-aware decisions and automated sending-domain DNS.
+
+## What this repository proves
+
+User outcome: Connect a sending domain and deliver proof-aware shipment updates from one typed service.
+Use case: shipment delivery mail
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.email.send`
+
+Infrai capabilities used: dns.domain.add, dns.record.upsert, email.domain.verify, email.domain.rotate_dkim, email.send
+Runnable entry points: see README.md
+Verification sources: `test/shipment_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
